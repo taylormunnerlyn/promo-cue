@@ -1,0 +1,12 @@
+<nav-bar-directive></nav-bar-directive>
+<h2>CLIENTS</h2>
+
+<input placeholder="Name" ng-model="filter.name"/>
+<input placeholder="Phone" ng-model="filter.phone"/>
+<input placeholder="Number of Weeks" ng-model="filter.number"/>
+
+<ul ng-repeat="client in clients | filter: filter">
+  <li>{{client.name}}</li>
+  <li>{{client.phone}}</li>
+  <li>{{client.number}}</li>
+</ul>
