@@ -1,4 +1,4 @@
 <nav-bar-directive></nav-bar-directive>
 <h2>MASS TEXT</h2>
-<textarea placeholder="Write Message Here" rows="8" cols="40"></textarea><br></br>
-<button>Send</button>
+<textarea ng-model="message" placeholder="Write Message Here" rows="8" cols="40"></textarea><br></br>
+<button ng-click="sendText(numbers, message)">Send</button>

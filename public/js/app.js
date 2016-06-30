@@ -1,36 +1,43 @@
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'ngFileUpload'])
   .config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider
-      .otherwise('/login')
+      .otherwise('/')
 
     $stateProvider
       .state('login', {
-        url: '/login',
-        templateUrl: './views/login-tmpl.html'
+        url: '/',
+        templateUrl: './views/login-tmpl.html',
+        controller: 'loginCtrl'
       })
       .state('newClient', {
         url: '/newClient',
-        templateUrl: './views/newClient-tmpl.html'
+        templateUrl: './views/newClient-tmpl.html',
+        controller: 'newClientCtrl'
       })
       .state('defaultMessage', {
         url: '/defaultMessage',
-        templateUrl: './views/defaultMessage-tmpl.html'
+        templateUrl: './views/defaultMessage-tmpl.html',
+        controller: 'defaultMessageCtrl',
+        resolve: { user: function(mainService) {
+          return mainService.getUser();
+        } }
       })
       .state('massText', {
         url: '/massText',
-        templateUrl: './views/massText-tmpl.html'
+        templateUrl: './views/massText-tmpl.html',
+        controller: 'massTextCtrl'
       })
       .state('csvPage', {
         url: '/csv',
-        templateUrl: './views/csv-tmpl.html'
-      })
-      .state('newAdmin', {
-        url: '/newAdmin',
-        templateUrl: './views/newAdmin-tmpl.html'
+        templateUrl: './views/csv-tmpl.html',
+        controller: 'csvCtrl'
       })
       .state('clients', {
         url: '/clients',
         templateUrl: './views/clients-tmpl.html',
-        controller: 'clientsCtrl'
+        controller: 'clientsCtrl',
+        resolve: { user: function(mainService) {
+          return mainService.getUser();
+        } }
       })
   })

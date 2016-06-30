@@ -1,6 +1,6 @@
 <nav-bar-directive></nav-bar-directive>
 <h2>NEW CLIENT</h2>
-<input placeholder="Name" />
-<input placeholder="Phone" />
-<input placeholder="Number of Weeks" />
-<button>Save</button>
+<input type="text" placeholder="Name" ng-model="newClient.name"/>
+<input type="number" placeholder="Phone" ng-model="newClient.phone"/>
+<input type="number" placeholder="Number of Weeks" ng-model="newClient.number"/>
+<button ng-click="createClients()">Save</button>
