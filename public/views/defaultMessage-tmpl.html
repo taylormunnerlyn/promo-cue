@@ -1,4 +1,17 @@
 <nav-bar-directive></nav-bar-directive>
 <h2>DEFAULT PROMOTION</h2>
-<textarea placeholder="Write Message Here" rows="8" cols="40"></textarea><br></br>
-<button>Save</button>
+<textarea ng-model="newMessage" placeholder="Write Message Here" rows="8" cols="40"></textarea><br></br>
+<button ng-click="createDefaultMessage()">Save</button>
+
+
+<ul ng-repeat="message in defaultMessage">
+  <div ng-if="message._id === user.defaultMessage">
+    Default Promotion
+  </div>
+  <li>{{message.message}}</li>
+  <input type="text" placeholder="Edit Message" ng-model="updatedMessage.message"/>
+  <button ng-click="updateMessage(message._id, updatedMessage)" name="button">Save Changes</button>
+  <button ng-click="deleteMessage(message._id)">Delete Message</button>
+  <button ng-click="makeDefault(message._id)">Make Default</button>
+
+</ul>
