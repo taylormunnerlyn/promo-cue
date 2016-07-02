@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700)
+
+*
+  font-family: 'Montserrat', sans-serif
+
+.login-main-container
+  height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  background-color: black
+  padding-top: 15px
+
+.login-block-container
+  height: 100vh
+  width: 40%
+
+.login-h1-container
+  height: 13vh
+  width: 100%
+  background: black
+  display: flex
+  justify-content: center
+  align-items: center
+  h1
+    color: white
+    font-size: 80px
+
+.login-underline
+  height: .75vh
+  width: 100%
+  background-color: white
+
+.login-login
+  height: 85.25vh
+  width: 100%
+  background: black
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  float: left
+  transition: .4
+  h2
+    color: white
+    font-size: 60px
+  button
+    color: white
+    font-size: 60px
+    background: none
+    cursor: pointer
+  input
+    height: 7vh
+    width: 60%
+    border-radius: 2px
+    font-size: 30px
+
+.login-block-container:hover
+  .login-h1-container
+    background-color: white
+    transition: 3s
+    h1
+      color: black
+  .login-underline
+    background-color: black
+  .login-login
+    background-color: white
+    transition: 3s
+    input
+      border: 2px solid black
+      text-align: center
+    h2
+      color: black
+    button
+      color: black
+
+.login-register
+  height: 85vh
+  width: 49.8%
+  background: black
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  input
+    background-color: none
+
+// .login-register:hover
+//   box-shadow: 0 0 1.8em black

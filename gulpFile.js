@@ -12,8 +12,8 @@ var babel = require('gulp-babel');
 // DECLARE FILE PATHS
 // ============================================================
 var paths = {
-  jsSource: ['./public/app/**/*.js', '!/public/bundle.js'],
-  sassSource: ['./public/styles/**/*.sass'], // Add to array or change current path to './public/styles/**/*.scss' to use Scss
+  jsSource: ['./public/js/**/*.js', '!/public/bundle.js'],
+  sassSource: ['./public/styles/**/*.{css,sass}'], // Add to array or change current path to './public/styles/**/*.scss' to use Scss
   //lessSource: ['./public/styles/**/*.less'] //Uncomment if using Less
 };
 
@@ -23,7 +23,7 @@ gulp.task('js', function() {
   return gulp.src(paths.jsSource)
   //.pipe(babel()) //Uncomment if using ES6
   .pipe(concat('bundle.js'))
-  .pipe(annotate())
+  //.pipe(annotate())
   //.pipe(uglify()) //Uncomment when code is production ready
   .pipe(gulp.dest('./public'));
 });

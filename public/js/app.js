@@ -9,6 +9,11 @@ angular.module('app', ['ui.router', 'ngFileUpload'])
         templateUrl: './views/login-tmpl.html',
         controller: 'loginCtrl'
       })
+      .state('register', {
+        url: '/register',
+        templateUrl: './views/register-tmpl.html',
+        controller: 'loginCtrl'
+      })
       .state('newClient', {
         url: '/newClient',
         templateUrl: './views/newClient-tmpl.html',

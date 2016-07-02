@@ -6,7 +6,7 @@ angular.module("app").controller("csvCtrl", function($scope, Upload, $timeout) {
         $scope.errFile = errFiles && errFiles[0];
         if (file) {
             file.upload = Upload.upload({
-                url: 'csv',
+                url: '/csv',
                 data: {file: file}
             });
 

@@ -1,5 +1,6 @@
 var Admin = require('./../models/admin.js')
-var parser = require('csv-parse');
+var csv = require('csv');
+var fs = require('fs');
 
 module.exports = {
 
@@ -49,9 +50,24 @@ module.exports = {
 
     },
 
-    // uploadFile: function(req, res) {
-    //
-    // }
+    uploadFile: function(req, res) {
+      var file = req.files.file.path;
+      fs.readFile(file, 'utf-8', function(err, data){
+        csv.parse(data, function(parsedErr, parsedData) {
+          var newArr = [];
+        parsedData.forEach(function(e, i, self) {
+          if (i !== 0) {
+            newArr.push({
+              'Name': e[0],
+              'Phone': e[1],
+              'Number of Weeks': e[2]
+            })
+          }
+        })
+          console.log(newArr);
+        })
+      })
+    }
 
 
 

@@ -10,6 +10,11 @@ var passport = require('./services/passport');
 var config = require('./config');
 var textCtrl = require('./controllers/text/textCtrl');
 var cron = require('./cron');
+var multiparty = require('multiparty');
+var connectMultiparty = require('connect-multiparty');
+var csv = require('csv');
+
+var multipartyMiddleware = connectMultiparty();
 
 var isAuthed = function(req, res, next) {
     if (!req.isAuthenticated()) return res.status(401).send();
@@ -72,7 +77,7 @@ app.put('/defaultMessage/:id', defaultMessageCtrl.update);
 app.delete('/defaultMessage/:id', defaultMessageCtrl.delete);
 
 app.post('/text', textCtrl.sendText);
-// app.post('/csv', adminCtrl.uploadFile);
+app.post('/csv', multipartyMiddleware, adminCtrl.uploadFile);
 
 
 // cron.start();
