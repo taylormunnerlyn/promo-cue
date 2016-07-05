@@ -1,6 +1,22 @@
-<nav-bar-directive></nav-bar-directive>
-<h2>NEW CLIENT</h2>
-<input type="text" placeholder="Name" ng-model="newClient.name"/>
-<input type="number" placeholder="Phone" ng-model="newClient.phone"/>
-<input type="number" placeholder="Number of Weeks" ng-model="newClient.number"/>
-<button ng-click="createClients()">Save</button>
+<div class="newClient-main-container">
+  <div id="nav-icon" ng-class="{ 'open': isActive }" ng-click="activeButton()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+  <nav-bar-directive class="nav" ng-class="{ 'nav-display': isActive }"></nav-bar-directive>
+
+</div>
+
+    <div class="newClient-block-container">
+    <h2 class="animated fadeInUpBig">NEW CLIENT</h2>
+    <div class=" animated fadeInDownBig newClient-underline"></div>
+    <input class="name animated fadeInLeftBig" type="text" placeholder="Name" ng-model="newClient.name" />
+    <input class="phone animated fadeInDownBig" type="number" placeholder="Phone" ng-model="newClient.phone" />
+    <input class="number animated fadeInRightBig" type="number" placeholder="Number of Weeks" ng-model="newClient.number" />
+    <button class="animated fadeInDownBig" ng-click="createClients()">Save</button>
+
+  </div>
+</div>

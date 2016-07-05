@@ -1,17 +1,39 @@
-<nav-bar-directive></nav-bar-directive>
-<h2>CLIENTS</h2>
+<div class="clients-main-container">
+    <div id="nav-icon" ng-class="{ 'open': isActive }" ng-click="activeButton()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <nav-bar-directive class="nav" ng-class="{ 'nav-display': isActive }"></nav-bar-directive>
+    </div>
 
-<input placeholder="Search Name" ng-model="filter.name"/>
-<input placeholder="Search Phone" ng-model="filter.phone"/>
-<input placeholder="Search Num. of Weeks" ng-model="filter.number"/>
+    <div class="clients-h2-container">
+        <h2>CLIENTS</h2>
+    </div>
 
-<ul ng-repeat="client in clients | filter: filter">
-  <li>{{client.name}}</li>
-  <li>{{client.phone}}</li>
-  <li>{{client.number}}</li>
-  <input type="text" placeholder="Edit Name" ng-model="updatedClient.name"/>
-  <input type="number" placeholder="Edit Phone" ng-model="updatedClient.phone"/>
-  <input type="number" placeholder="Edit Num. of Weeks" ng-model="updatedClient.number"/>
-  <button ng-click="updateClient(client._id, updatedClient)" name="button">Save Changes</button>
-  <button ng-click="deleteClient(client._id)">Delete Client</button>
-</ul>
+    <div class="clients-underline"></div>
+
+    <div class="clients-search-bar">
+        <input placeholder="Search Name" ng-model="filter.name" />
+        <input placeholder="Search Phone" ng-model="filter.phone" />
+        <input placeholder="Search Num. of Weeks" ng-model="filter.number" />
+    </div>
+
+
+    <div class="clients-card-container">
+        <ul ng-repeat="client in clients | filter: filter">
+            <li><span class="span"><u>Name</u>:</span> {{client.name}}</li><br>
+            <li><span class="span"><u>Phone</u>:</span> {{client.phone}}</li><br>
+            <li><span class="span"><u>Number of Weeks</u>:</span> {{client.number}}</li><br>
+            <input type="text" placeholder="Edit Name" ng-model="updatedClient.name" />
+            <input type="number" placeholder="Edit Phone" ng-model="updatedClient.phone" />
+            <input type="number" placeholder="Edit Num. of Weeks" ng-model="updatedClient.number" /><br><br>
+            <button ng-click="updateClient(client._id, updatedClient)" name="button">Save Changes</button>
+            <button ng-click="deleteClient(client._id)">Delete Client</button><br><br><br
+        </ul>
+    </div>
+
+
+</div>

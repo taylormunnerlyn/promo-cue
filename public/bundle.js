@@ -49,6 +49,9 @@ angular.module('app', ['ui.router', 'ngFileUpload'])
 
 angular.module('app').controller('clientsCtrl', function($scope, mainService, user){
 
+  $scope.isActive = false;
+  $scope.hidden = true;
+
   $scope.getClients = function() {
     mainService.getUser().then(function(response) {
       $scope.clients = response.data.clients;
@@ -70,6 +73,14 @@ angular.module('app').controller('clientsCtrl', function($scope, mainService, us
       $scope.getClients();
     });
   }
+
+  $scope.faded = []
+  $scope.activeButton = function() {
+  $scope.isActive = !$scope.isActive;
+  $scope.faded.splice(0);
+  $scope.faded.push('animated fadeInRight')
+  $scope.hidden = !$scope.hidden;
+  } 
 
 
 
@@ -103,6 +114,9 @@ angular.module("app").controller("csvCtrl", function($scope, Upload, $timeout) {
 });
 
 angular.module("app").controller("defaultMessageCtrl", function($scope, mainService, user) {
+
+  $scope.isActive = false;
+  $scope.hidden = true;
 
     $scope.getDefaultMessage = function() {
         mainService.getUser().then(function(response) {
@@ -144,12 +158,13 @@ angular.module("app").controller("defaultMessageCtrl", function($scope, mainServ
       })
     }
 
-    // $scope.getUser = function() {
-    //   mainService.getUser().then(function(response) {
-    //     $scope.user = response.data;
-    //   })
-    // }
-    // $scope.getUser();
+    $scope.faded = []
+    $scope.activeButton = function() {
+    $scope.isActive = !$scope.isActive;
+    $scope.faded.splice(0);
+    $scope.faded.push('animated fadeInRight')
+    $scope.hidden = !$scope.hidden;
+    } 
 
 });
 
@@ -332,6 +347,10 @@ angular.module('app').service('mainService', function($http){
 // INITILIZE CONTROLLER
 // ============================================================
 angular.module("app").controller("massTextCtrl", function($scope, mainService) {
+
+  $scope.isActive = false;
+  $scope.hidden = true;
+
   $scope.numbers = [];
   mainService.getUser().then(function(response) {
     $scope.user = response.data;
@@ -346,6 +365,15 @@ angular.module("app").controller("massTextCtrl", function($scope, mainService) {
       $scope.message = '';
     });
   }
+
+  $scope.faded = []
+  $scope.activeButton = function() {
+  $scope.isActive = !$scope.isActive;
+  $scope.faded.splice(0);
+  $scope.faded.push('animated fadeInRight')
+  $scope.hidden = !$scope.hidden;
+  } 
+
 });
 
 angular.module('app').directive('navBarDirective', function() {
@@ -367,6 +395,9 @@ angular.module('app').directive('navBarDirective', function() {
 // ============================================================
 angular.module("app").controller("newClientCtrl", function($scope, mainService) {
 
+    $scope.isActive = false;
+    $scope.hidden = true;
+
     $scope.createClients = function() {
         mainService.createClients($scope.newClient).then(function(response) {
             $scope.newestClient = response;
@@ -377,4 +408,13 @@ angular.module("app").controller("newClientCtrl", function($scope, mainService) 
         });
     }
 
+
+    $scope.faded = []
+    $scope.activeButton = function() {
+    $scope.isActive = !$scope.isActive;
+    $scope.faded.splice(0);
+    $scope.faded.push('animated fadeInRight')
+    $scope.hidden = !$scope.hidden;
+
+    }
 });

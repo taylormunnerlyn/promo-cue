@@ -1,6 +1,10 @@
 // INITILIZE CONTROLLER
 // ============================================================
 angular.module("app").controller("massTextCtrl", function($scope, mainService) {
+
+  $scope.isActive = false;
+  $scope.hidden = true;
+
   $scope.numbers = [];
   mainService.getUser().then(function(response) {
     $scope.user = response.data;
@@ -15,4 +19,13 @@ angular.module("app").controller("massTextCtrl", function($scope, mainService) {
       $scope.message = '';
     });
   }
+
+  $scope.faded = []
+  $scope.activeButton = function() {
+  $scope.isActive = !$scope.isActive;
+  $scope.faded.splice(0);
+  $scope.faded.push('animated fadeInRight')
+  $scope.hidden = !$scope.hidden;
+  } 
+
 });

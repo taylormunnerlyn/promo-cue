@@ -1,4 +1,20 @@
-<nav-bar-directive></nav-bar-directive>
-<h2>MASS TEXT</h2>
-<textarea ng-model="message" placeholder="Write Message Here" rows="8" cols="40"></textarea><br></br>
-<button ng-click="sendText(numbers, message)">Send</button>
+<div class="mass-text-main-container">
+  <div id="nav-icon" ng-class="{ 'open': isActive }" ng-click="activeButton()">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <nav-bar-directive class="nav" ng-class="{ 'nav-display': isActive }"></nav-bar-directive>
+</div>
+
+  <div class="mass-text-block-container">
+
+    <h2 class="animated fadeInUpBig">MASS TEXT</h2>
+    <div class=" animated fadeInUpBig mass-text-underline"></div>
+    <textarea class="animated fadeInUpBig" ng-model="message" placeholder="Write Message Here" rows="25" cols="65"></textarea><br></br>
+    <button class="animated fadeInUpBig" ng-click="sendText(numbers, message)">Send</button>
+
+  </div>
+</div>

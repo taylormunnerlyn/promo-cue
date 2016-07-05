@@ -1,5 +1,8 @@
 angular.module("app").controller("defaultMessageCtrl", function($scope, mainService, user) {
 
+  $scope.isActive = false;
+  $scope.hidden = true;
+
     $scope.getDefaultMessage = function() {
         mainService.getUser().then(function(response) {
             $scope.user = response.data;
@@ -40,11 +43,12 @@ angular.module("app").controller("defaultMessageCtrl", function($scope, mainServ
       })
     }
 
-    // $scope.getUser = function() {
-    //   mainService.getUser().then(function(response) {
-    //     $scope.user = response.data;
-    //   })
-    // }
-    // $scope.getUser();
+    $scope.faded = []
+    $scope.activeButton = function() {
+    $scope.isActive = !$scope.isActive;
+    $scope.faded.splice(0);
+    $scope.faded.push('animated fadeInRight')
+    $scope.hidden = !$scope.hidden;
+    } 
 
 });

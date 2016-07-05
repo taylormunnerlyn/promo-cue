@@ -1,5 +1,8 @@
 angular.module('app').controller('clientsCtrl', function($scope, mainService, user){
 
+  $scope.isActive = false;
+  $scope.hidden = true;
+
   $scope.getClients = function() {
     mainService.getUser().then(function(response) {
       $scope.clients = response.data.clients;
@@ -21,6 +24,14 @@ angular.module('app').controller('clientsCtrl', function($scope, mainService, us
       $scope.getClients();
     });
   }
+
+  $scope.faded = []
+  $scope.activeButton = function() {
+  $scope.isActive = !$scope.isActive;
+  $scope.faded.splice(0);
+  $scope.faded.push('animated fadeInRight')
+  $scope.hidden = !$scope.hidden;
+  } 
 
 
 

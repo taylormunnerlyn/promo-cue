@@ -2413,6 +2413,113 @@ table {
 * {
   font-family: 'Montserrat', sans-serif; }
 
+.clients-main-container {
+  height: 100vh;
+  width: 100%; }
+  .clients-main-container .clients-h2-container {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .clients-main-container .clients-h2-container h2 {
+      color: black;
+      font-size: 80px; }
+  .clients-main-container .clients-underline {
+    height: .75vh;
+    width: 600px;
+    background-color: black;
+    margin-top: -5px;
+    margin: 0 auto; }
+  .clients-main-container .clients-search-bar {
+    width: 520px;
+    margin: 0 auto;
+    margin-top: 40px; }
+    .clients-main-container .clients-search-bar input {
+      border: 1.5px solid black;
+      border-radius: 2px; }
+  .clients-main-container .clients-card-container {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px; }
+    .clients-main-container .clients-card-container ul {
+      height: 220px;
+      width: 600px;
+      background-color: black;
+      margin-bottom: 30px;
+      padding: 20px; }
+      .clients-main-container .clients-card-container ul li {
+        color: white; }
+      .clients-main-container .clients-card-container ul input {
+        border: 1.5px solid white;
+        border-radius: 2px;
+        color: white; }
+      .clients-main-container .clients-card-container ul button {
+        height: 30px;
+        width: 140px;
+        border: 1.5px solid white;
+        border-radius: 6px;
+        color: white; }
+      .clients-main-container .clients-card-container ul span {
+        margin-right: 10px; }
+
+button {
+  background: none; }
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+* {
+  font-family: 'Montserrat', sans-serif; }
+
+.default-message-main-container {
+  height: 100vh;
+  width: 100%; }
+  .default-message-main-container .default-message-h2-container {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .default-message-main-container .default-message-h2-container h2 {
+      color: black;
+      font-size: 80px; }
+  .default-message-main-container .default-message-underline {
+    height: .75vh;
+    width: 600px;
+    background-color: black;
+    margin-top: -5px;
+    margin: 0 auto; }
+  .default-message-main-container .default-message-card-container {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px; }
+    .default-message-main-container .default-message-card-container ul {
+      height: 220px;
+      width: 600px;
+      background-color: black;
+      margin-bottom: 30px;
+      padding: 20px; }
+      .default-message-main-container .default-message-card-container ul li {
+        color: white; }
+      .default-message-main-container .default-message-card-container ul input {
+        border: 1.5px solid white;
+        border-radius: 2px;
+        color: white; }
+      .default-message-main-container .default-message-card-container ul button {
+        height: 30px;
+        width: 140px;
+        border: 1.5px solid white;
+        border-radius: 6px;
+        color: white; }
+      .default-message-main-container .default-message-card-container ul span {
+        margin-right: 10px; }
+
+button {
+  background: none; }
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+* {
+  font-family: 'Montserrat', sans-serif; }
+
 .login-main-container {
   height: 100vh;
   width: 100%;
@@ -2467,33 +2574,282 @@ table {
     border-radius: 2px;
     font-size: 30px; }
 
-.login-block-container:hover .login-h1-container {
-  background-color: white;
-  transition: 3s; }
-  .login-block-container:hover .login-h1-container h1 {
-    color: black; }
+.login-login input {
+  transition: 1s; }
 
-.login-block-container:hover .login-underline {
-  background-color: black; }
+.email:hover {
+  text-align: center;
+  transition: .7s; }
 
-.login-block-container:hover .login-login {
-  background-color: white;
-  transition: 3s; }
-  .login-block-container:hover .login-login input {
+.password:hover {
+  text-align: center;
+  transition: .7s; }
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+* {
+  font-family: 'Montserrat', sans-serif; }
+
+.mass-text-main-container {
+  height: 100vh;
+  width: 100%; }
+  .mass-text-main-container .mass-text-block-container {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto; }
+    .mass-text-main-container .mass-text-block-container button {
+      color: black;
+      font-size: 60px;
+      background: none;
+      cursor: pointer;
+      margin-bottom: 70px; }
+  .mass-text-main-container button {
+    background: none; }
+  .mass-text-main-container h2 {
+    color: black;
+    font-size: 80px; }
+  .mass-text-main-container .mass-text-underline {
+    height: .75vh;
+    width: 100%;
+    background-color: black;
+    margin-top: -5px; }
+  .mass-text-main-container input {
+    height: 7vh;
+    width: 60%;
+    border-radius: 5px;
+    font-size: 30px;
+    border: 2px solid black; }
+  .mass-text-main-container textarea {
+    font-size: 20px;
+    margin-top: 30px;
     border: 2px solid black;
-    text-align: center; }
-  .login-block-container:hover .login-login h2 {
-    color: black; }
-  .login-block-container:hover .login-login button {
-    color: black; }
+    border-radius: 2px; }
+
+.name:hover {
+  text-align: center; }
+
+.phone:hover {
+  text-align: center; }
+
+.number:hover {
+  text-align: center; }
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+* {
+  font-family: 'Montserrat', sans-serif; }
+
+.nav {
+  display: none;
+  float: right; }
+  .nav button h3 {
+    font-size: 40px;
+    color: white; }
+
+.nav-display {
+  height: 100vh;
+  width: 400%;
+  background-color: black;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+#nav-icon {
+  height: 5vh;
+  width: 3%;
+  float: right;
+  width: 60px;
+  height: 45px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer; }
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 50%;
+  background: #d3531a;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
+
+#nav-icon span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0; }
+
+#nav-icon span:nth-child(odd) {
+  left: 0px;
+  border-radius: 9px 0 0 9px; }
+
+#nav-icon span {
+  margin-top: 10px;
+  margin-left: -8px; }
+
+span:nth-child(2) {
+  top: 0px; }
+
+#nav-icon span:nth-child(3), #nav-icon span:nth-child(4) {
+  top: 18px; }
+
+#nav-icon span:nth-child(5), #nav-icon span:nth-child(6) {
+  top: 36px; }
+
+#nav-icon.open span:nth-child(1), #nav-icon.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#nav-icon.open span:nth-child(2), #nav-icon.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+#nav-icon.open span:nth-child(1) {
+  left: 5px;
+  top: 7px; }
+
+#nav-icon.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 7px; }
+
+#nav-icon.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0; }
+
+#nav-icon.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0; }
+
+#nav-icon.open span:nth-child(5) {
+  left: 5px;
+  top: 29px; }
+
+#nav-icon.open span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 29px; }
+
+.newClient-main-container {
+  height: 100vh;
+  width: 100%; }
+  .newClient-main-container .newClient-block-container {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto; }
+  .newClient-main-container h2 {
+    color: black;
+    font-size: 80px; }
+  .newClient-main-container .newClient-underline {
+    height: .75vh;
+    width: 100%;
+    background-color: black;
+    margin-top: -100px; }
+  .newClient-main-container input {
+    height: 7vh;
+    width: 60%;
+    border-radius: 5px;
+    font-size: 30px;
+    border: 2px solid black; }
+  .newClient-main-container button {
+    color: black;
+    font-size: 60px;
+    background: none;
+    cursor: pointer; }
+
+.name:hover {
+  text-align: center; }
+
+.phone:hover {
+  text-align: center; }
+
+.number:hover {
+  text-align: center; }
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+* {
+  font-family: 'Montserrat', sans-serif; }
+
+.register-main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  padding-top: 15px; }
+
+.register-block-container {
+  height: 100vh;
+  width: 40%; }
+
+.register-h1-container {
+  height: 13vh;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .register-h1-container h1 {
+    color: white;
+    font-size: 80px; }
+
+.register-underline {
+  height: .75vh;
+  width: 100%;
+  background-color: white; }
 
 .login-register {
-  height: 85vh;
-  width: 49.8%;
+  height: 84.25vh;
+  width: 100%;
   background: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  float: left;
+  transition: .4; }
+  .login-register h2 {
+    color: white;
+    font-size: 60px; }
+  .login-register button {
+    color: white;
+    font-size: 60px;
+    background: none;
+    cursor: pointer; }
   .login-register input {
-    background-color: none; }
+    height: 7vh;
+    width: 60%;
+    border-radius: 2px;
+    font-size: 30px; }
+
+.name:hover {
+  text-align: center; }
+
+.email:hover {
+  text-align: center; }
+
+.password:hover {
+  text-align: center; }
