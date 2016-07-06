@@ -9,21 +9,21 @@
         <nav-bar-directive class="nav" ng-class="{ 'nav-display': isActive }"></nav-bar-directive>
     </div>
 
-    <div class="clients-h2-container">
+    <div class="animated fadeInUpBig clients-h2-container">
         <h2>CLIENTS</h2>
     </div>
 
-    <div class="clients-underline"></div>
+    <div class="animated fadeInDownBig clients-underline"></div>
 
     <div class="clients-search-bar">
-        <input placeholder="Search Name" ng-model="filter.name" />
-        <input placeholder="Search Phone" ng-model="filter.phone" />
-        <input placeholder="Search Num. of Weeks" ng-model="filter.number" />
+        <input class="animated fadeInRightBig"placeholder="Search Name" ng-model="filter.name" />
+        <input class="animated fadeInUpBig" placeholder="Search Phone" ng-model="filter.phone" />
+        <input class="animated fadeInLeftBig" placeholder="Search Num. of Weeks" ng-model="filter.number" />
     </div>
 
 
     <div class="clients-card-container">
-        <ul ng-repeat="client in clients | filter: filter">
+        <ul class="animated fadeInDownBig"ng-repeat="client in clients | filter: filter">
             <li><span class="span"><u>Name</u>:</span> {{client.name}}</li><br>
             <li><span class="span"><u>Phone</u>:</span> {{client.phone}}</li><br>
             <li><span class="span"><u>Number of Weeks</u>:</span> {{client.number}}</li><br>

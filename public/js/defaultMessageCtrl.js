@@ -49,6 +49,6 @@ angular.module("app").controller("defaultMessageCtrl", function($scope, mainServ
     $scope.faded.splice(0);
     $scope.faded.push('animated fadeInRight')
     $scope.hidden = !$scope.hidden;
-    } 
+    }
 
 });

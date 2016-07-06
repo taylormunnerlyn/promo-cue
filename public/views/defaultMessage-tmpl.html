@@ -1,4 +1,4 @@
-<div class="dafualt-message-main-container">
+<div class="default-message-main-container">
     <div id="nav-icon" ng-class="{ 'open': isActive }" ng-click="activeButton()">
         <span></span>
         <span></span>
@@ -9,23 +9,25 @@
         <nav-bar-directive class="nav" ng-class="{ 'nav-display': isActive }"></nav-bar-directive>
     </div>
 
-    <div class="dafualt-message-h2-container">
+    <div class="animated fadeInDown default-message-h2-container">
         <h2>Default Promotion</h2>
     </div>
 
     <div class="default-message-underline"></div>
 
-    <textarea ng-model="newMessage" placeholder="Write Message Here" rows="8" cols="40"></textarea><br></br>
-    <button ng-click="createDefaultMessage()">Save</button>
+    <div class="default-message-textarea-container">
+      <textarea ng-model="newMessage" placeholder="Write Message Here" rows="13" cols="56"></textarea><br></br>
+      <button ng-click="createDefaultMessage()">Save</button>
+    </div>
 
 
-    <div class="dafualt-message-card-container">
-      <ul ng-repeat="message in defaultMessage">
-        <div ng-if="message._id === user.defaultMessage">
-          Default Promotion
-        </div>
-        <li>{{message.message}}</li>
-        <input type="text" placeholder="Edit Message" ng-model="updatedMessage.message"/>
+    <div class="default-message-card-container">
+      <ul class="animated fadeInUpBig"ng-repeat="message in defaultMessage">
+        <div class="default-message-specifier" ng-if="message._id === user.defaultMessage">
+            <u>Default Promotion</u>
+        </div><br>
+        <li><span><u>Message</u>:</span>{{message.message}}</li><br>
+        <input type="text" placeholder="Edit Message" ng-model="updatedMessage.message"/><br><br>
         <button ng-click="updateMessage(message._id, updatedMessage)" name="button">Save Changes</button>
         <button ng-click="deleteMessage(message._id)">Delete Message</button>
         <button ng-click="makeDefault(message._id)">Make Default</button>

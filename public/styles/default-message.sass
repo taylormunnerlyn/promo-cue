@@ -21,16 +21,33 @@
     background-color: black
     margin-top: -5px
     margin: 0 auto
+  .default-message-textarea-container
+    height: 170px
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 25px
+    textarea
+      border: 2px solid black
+      font-size: 20px
+      margin-top: 15px
+    button
+      font-size: 25px
+      margin-top: -10px
+      margin-bottom: 10px
   .default-message-card-container
     width: 600px
     margin: 0 auto
     margin-top: 40px
     ul
-      height: 220px
+      height: 175px
       width: 600px
       background-color: black
       margin-bottom: 30px
       padding: 20px
+      border-radius: 5px
       li
         color: white
       input
@@ -45,6 +62,13 @@
         color: white
       span
         margin-right: 10px
+      .default-message-specifier
+        width: 165px
+        color: white
+        margin: 0 auto
+        font-size: 20px
+
 
 button
   background: none
+  cursor: pointer

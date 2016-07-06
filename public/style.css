@@ -2447,7 +2447,8 @@ table {
       width: 600px;
       background-color: black;
       margin-bottom: 30px;
-      padding: 20px; }
+      padding: 20px;
+      border-radius: 5px; }
       .clients-main-container .clients-card-container ul li {
         color: white; }
       .clients-main-container .clients-card-container ul input {
@@ -2488,16 +2489,33 @@ button {
     background-color: black;
     margin-top: -5px;
     margin: 0 auto; }
+  .default-message-main-container .default-message-textarea-container {
+    height: 170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px; }
+    .default-message-main-container .default-message-textarea-container textarea {
+      border: 2px solid black;
+      font-size: 20px;
+      margin-top: 15px; }
+    .default-message-main-container .default-message-textarea-container button {
+      font-size: 25px;
+      margin-top: -10px;
+      margin-bottom: 10px; }
   .default-message-main-container .default-message-card-container {
     width: 600px;
     margin: 0 auto;
     margin-top: 40px; }
     .default-message-main-container .default-message-card-container ul {
-      height: 220px;
+      height: 175px;
       width: 600px;
       background-color: black;
       margin-bottom: 30px;
-      padding: 20px; }
+      padding: 20px;
+      border-radius: 5px; }
       .default-message-main-container .default-message-card-container ul li {
         color: white; }
       .default-message-main-container .default-message-card-container ul input {
@@ -2512,9 +2530,15 @@ button {
         color: white; }
       .default-message-main-container .default-message-card-container ul span {
         margin-right: 10px; }
+      .default-message-main-container .default-message-card-container ul .default-message-specifier {
+        width: 165px;
+        color: white;
+        margin: 0 auto;
+        font-size: 20px; }
 
 button {
-  background: none; }
+  background: none;
+  cursor: pointer; }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
@@ -2664,6 +2688,7 @@ button {
   width: 60px;
   height: 45px;
   position: relative;
+  z-index: 10;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -2681,6 +2706,7 @@ button {
   width: 50%;
   background: #d3531a;
   opacity: 1;
+  box-shadow: 0.02em 0.05em 0.2em black;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -2760,23 +2786,35 @@ span:nth-child(2) {
     margin: 0 auto; }
   .newClient-main-container h2 {
     color: black;
-    font-size: 80px; }
+    font-size: 80px;
+    text-shadow: 0.02em 0.02em 0.08em black; }
   .newClient-main-container .newClient-underline {
     height: .75vh;
     width: 100%;
     background-color: black;
-    margin-top: -100px; }
+    margin-top: -100px;
+    box-shadow: 0.05em 0.05em 0.5em black; }
   .newClient-main-container input {
     height: 7vh;
     width: 60%;
     border-radius: 5px;
     font-size: 30px;
-    border: 2px solid black; }
+    border: 2px solid black;
+    box-shadow: 0 0 0.3em black;
+    transition: .3s; }
+  .newClient-main-container input:hover {
+    box-shadow: 0 0 0.6em black;
+    transition: .4s; }
   .newClient-main-container button {
     color: black;
     font-size: 60px;
     background: none;
-    cursor: pointer; }
+    cursor: pointer;
+    text-shadow: 0.02em 0.02em 0.08em black;
+    transition: .3s; }
+  .newClient-main-container button:hover {
+    text-shadow: 0.04em 0.04em 0.2em black;
+    transition: .4s; }
 
 .name:hover {
   text-align: center; }

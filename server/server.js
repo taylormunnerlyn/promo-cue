@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var cors = require('cors');
+// var cors = require('cors');
 var mongoose = require('mongoose');
 var adminCtrl = require('./controllers/adminCtrl');
 var clientsCtrl = require('./controllers/clientsCtrl');
@@ -26,7 +26,7 @@ var mongoURI = config.MONGO_URI;
 var port = config.port;
 
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 app.use(express.static(__dirname + './../public'));
 app.use(session({
     secret: config.session_secret,

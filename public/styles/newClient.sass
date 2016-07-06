@@ -2,7 +2,7 @@
 
 *
   font-family: 'Montserrat', sans-serif
-  
+
 .nav
   display: none
   float: right
@@ -26,6 +26,7 @@
   width: 60px
   height: 45px
   position: relative
+  z-index: 10
   -webkit-transform: rotate(0deg)
   -moz-transform: rotate(0deg)
   -o-transform: rotate(0deg)
@@ -42,6 +43,7 @@
   width: 50%
   background: #d3531a
   opacity: 1
+  box-shadow: .02em .05em .2em rgba(0, 0, 0, 1)
   -webkit-transform: rotate(0deg)
   -moz-transform: rotate(0deg)
   -o-transform: rotate(0deg)
@@ -134,22 +136,34 @@ span:nth-child(2)
   h2
     color: black
     font-size: 80px
+    text-shadow: .02em .02em .08em rgba(0, 0, 0, 1)
   .newClient-underline
     height: .75vh
     width: 100%
     background-color: black
     margin-top: -100px
+    box-shadow: .05em .05em .5em rgba(0, 0, 0, 1)
   input
     height: 7vh
     width: 60%
     border-radius: 5px
     font-size: 30px
     border: 2px solid black
+    box-shadow: 0 0 .3em rgba(0, 0, 0, 1)
+    transition: .3s
+  input:hover
+    box-shadow: 0 0 .6em rgba(0, 0, 0, 1)
+    transition: .4s
   button
     color: black
     font-size: 60px
     background: none
     cursor: pointer
+    text-shadow: .02em .02em .08em rgba(0, 0, 0, 1)
+    transition: .3s
+  button:hover
+    text-shadow: .04em .04em .2em rgba(0, 0, 0, 1)
+    transition: .4s
 
 .name:hover
   text-align: center
