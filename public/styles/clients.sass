@@ -6,21 +6,20 @@
 .clients-main-container
   height: 100vh
   width: 100%
-  .clients-h2-container
-    height: 10%
-    width: 100%
-    display: flex
-    align-items: center
-    justify-content: center
+  .title-wrapper
+    width: 600px
+    margin: 0 auto
     h2
       color: black
       font-size: 80px
-  .clients-underline
-    height: .75vh
-    width: 600px
-    background-color: black
-    margin-top: -5px
-    margin: 0 auto
+      text-shadow: .04em .04em .1em rgba(0, 0, 0, 1)
+      text-align: center
+    .clients-underline
+      height: .75vh
+      width: 100%
+      background-color: black
+      margin-top: 10px
+      box-shadow: .1em .1em .5em rgba(0, 0, 0, 1)
   .clients-search-bar
     width: 520px
     margin: 0 auto
@@ -28,31 +27,53 @@
     input
       border: 1.5px solid black
       border-radius: 2px
+      box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
+      transition: .4s
   .clients-card-container
     width: 600px
     margin: 0 auto
     margin-top: 40px
     ul
-      height: 220px
+      height: 250px
       width: 600px
-      background-color: black
+      background-color: white
       margin-bottom: 30px
       padding: 20px
+      border: 2px solid black
       border-radius: 5px
+      box-shadow: 0 0 1em rgba(0, 0, 0, 1)
+      transition: .3s
       li
-        color: white
+        height: 30px
+        color: black
+        box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
+        transition: .4s
+        padding: 8px
       input
-        border: 1.5px solid white
-        border-radius: 2px
-        color: white
+        // border-radius: 1px
+        color: black
+        box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
+        transition: .4s
+      input:hover
+        box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
+        transition: .4s
       button
         height: 30px
         width: 140px
-        border: 1.5px solid white
+        // border: 1.5px solid black
         border-radius: 6px
-        color: white
+        color: black
+        box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
+        transition: .4s
+      button:hover
+        box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
+        transition: .4s
       span
         margin-right: 10px
+    ul:hover
+      box-shadow: 0 0 1.5em rgba(0, 0, 0, 1)
+      transition: .4s
+
 
 button
   background: none

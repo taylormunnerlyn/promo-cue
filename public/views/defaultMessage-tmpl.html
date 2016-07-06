@@ -9,15 +9,17 @@
         <nav-bar-directive class="nav" ng-class="{ 'nav-display': isActive }"></nav-bar-directive>
     </div>
 
-    <div class="animated fadeInDown default-message-h2-container">
+    <div class="animated fadeInDown title-wrapper">
         <h2>Default Promotion</h2>
+        <div class="default-message-underline"></div>
     </div>
 
-    <div class="default-message-underline"></div>
+
 
     <div class="default-message-textarea-container">
       <textarea ng-model="newMessage" placeholder="Write Message Here" rows="13" cols="56"></textarea><br></br>
       <button ng-click="createDefaultMessage()">Save</button>
+      <div class="textarea-underline"></div>
     </div>
 
 

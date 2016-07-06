@@ -6,21 +6,20 @@
 .default-message-main-container
   height: 100vh
   width: 100%
-  .default-message-h2-container
-    height: 10%
-    width: 100%
-    display: flex
-    align-items: center
-    justify-content: center
+  .title-wrapper
+    width: 700px
+    margin: 0 auto
     h2
       color: black
       font-size: 80px
-  .default-message-underline
-    height: .75vh
-    width: 600px
-    background-color: black
-    margin-top: -5px
-    margin: 0 auto
+      text-shadow: .04em .04em .1em rgba(0, 0, 0, 1)
+      text-align: center
+    .default-message-underline
+      height: .75vh
+      width: 100%
+      background-color: black
+      margin-top: 10px
+      box-shadow: .05em .05em .5em rgba(0, 0, 0, 1)
   .default-message-textarea-container
     height: 170px
     width: 100%
@@ -33,40 +32,73 @@
       border: 2px solid black
       font-size: 20px
       margin-top: 15px
+      box-shadow: 0 0 .3em rgba(0, 0, 0, 1)
+      transition: .3s
+    textarea:hover
+      box-shadow: 0 0 .6em rgba(0, 0, 0, 1)
+      transition: .4s
     button
-      font-size: 25px
+      font-size: 35px
       margin-top: -10px
       margin-bottom: 10px
+      text-shadow: .02em .02em .04em rgba(0, 0, 0, 1)
+    .textarea-underline
+      height: 2vh
+      width: 600px
+      background-color: black
+      margin-top: 40px
+      box-shadow: .05em .05em .5em rgba(0, 0, 0, 1)
   .default-message-card-container
     width: 600px
     margin: 0 auto
     margin-top: 40px
     ul
-      height: 175px
+      height: 200px
       width: 600px
-      background-color: black
+      background-color: white
       margin-bottom: 30px
       padding: 20px
+      border: 2px solid black
       border-radius: 5px
+      box-shadow: 0 0 1em rgba(0, 0, 0, 1)
+      transition: .3s
       li
-        color: white
+        height: 30px
+        color: black
+        box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
+        transition: .4s
+        padding: 8px
       input
-        border: 1.5px solid white
-        border-radius: 2px
-        color: white
+        // border-radius: 1px
+        color: black
+        box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
+        transition: .4s
+      input:hover
+        box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
+        transition: .4s
       button
         height: 30px
         width: 140px
-        border: 1.5px solid white
+        // border: 1.5px solid black
         border-radius: 6px
-        color: white
+        color: black
+        box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
+        transition: .4s
+      button:hover
+        box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
+        transition: .4s
       span
         margin-right: 10px
       .default-message-specifier
         width: 165px
-        color: white
+        color: black
         margin: 0 auto
         font-size: 20px
+        // text-shadow: .02em .02em .04em rgba(0, 0, 0, 1)
+        transition: .4s
+    ul:hover
+      box-shadow: 0 0 1.5em rgba(0, 0, 0, 1)
+      transition: .4s
 
 
 button
