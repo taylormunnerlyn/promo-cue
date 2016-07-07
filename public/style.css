@@ -2738,7 +2738,7 @@ button {
   width: 100%; }
   .mass-text-main-container .mass-text-block-container {
     height: 100%;
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -2769,6 +2769,8 @@ button {
       margin-top: 10px;
       box-shadow: 0.1em 0.1em 0.5em black; }
   .mass-text-main-container textarea {
+    height: 600px;
+    width: 600px;
     font-size: 20px;
     margin-top: 30px;
     border: 2px solid black;
@@ -2778,6 +2780,39 @@ button {
   .mass-text-main-container textarea:hover {
     box-shadow: 0 0 0.6em black;
     transition: .4s; }
+
+@media (max-width: 764px) {
+  .mass-text-main-container .mass-text-block-container .title-wrapper {
+    width: 500px; }
+    .mass-text-main-container .mass-text-block-container .title-wrapper h2 {
+      font-size: 70px; }
+  .mass-text-main-container .mass-text-block-container textarea {
+    height: 500px;
+    width: 500px; } }
+
+@media (max-width: 658px) {
+  .mass-text-main-container .mass-text-block-container .title-wrapper {
+    width: 420px;
+    margin-top: 55px; }
+    .mass-text-main-container .mass-text-block-container .title-wrapper h2 {
+      font-size: 60px; }
+  .mass-text-main-container .mass-text-block-container textarea {
+    height: 400px;
+    width: 400px; }
+  .mass-text-main-container .mass-text-block-container button {
+    font-size: 50px; } }
+
+@media (max-width: 460px) {
+  .mass-text-main-container .mass-text-block-container .title-wrapper {
+    width: 300px;
+    margin-top: 65px; }
+    .mass-text-main-container .mass-text-block-container .title-wrapper h2 {
+      font-size: 50px; }
+  .mass-text-main-container .mass-text-block-container textarea {
+    height: 300px;
+    width: 250px; }
+  .mass-text-main-container .mass-text-block-container button {
+    font-size: 50px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
