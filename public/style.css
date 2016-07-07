@@ -2413,6 +2413,10 @@ table {
 * {
   font-family: 'Montserrat', sans-serif; }
 
+body {
+  width: 100vw;
+  overflow-x: hidden; }
+
 .clients-main-container {
   height: 100vh;
   width: 100%; }
@@ -2877,7 +2881,6 @@ span:nth-child(2) {
   opacity: 0; }
 
 #nav-icon.open span:nth-child(4) {
-  left: 100%;
   opacity: 0; }
 
 #nav-icon.open span:nth-child(5) {
