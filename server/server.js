@@ -13,6 +13,8 @@ var cron = require('./cron');
 var multiparty = require('multiparty');
 var connectMultiparty = require('connect-multiparty');
 var csv = require('csv');
+mongoose.Promise = require('bluebird');
+
 
 var multipartyMiddleware = connectMultiparty();
 

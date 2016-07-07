@@ -6,12 +6,20 @@ angular.module("app").controller("defaultMessageCtrl", function($scope, mainServ
     $scope.getDefaultMessage = function() {
         mainService.getUser().then(function(response) {
             $scope.user = response.data;
+            for (var i = 0; i < response.data.messages.length; i++) {
+              if (response.data.messages[i]._id === $scope.user.defaultMessage) {
+                var item = response.data.messages.splice(i, 1)[0];
+                response.data.messages.unshift(item);
+              }
+            }
             $scope.defaultMessage = response.data.messages;
+            console.log(123, $scope.user);
+            console.log(124, $scope.defaultMessage);
         });
     };
     $scope.user = user.data;
-    console.log(user.data);
     $scope.defaultMessage = user.data.messages;
+    $scope.getDefaultMessage();
 
     $scope.createDefaultMessage = function() {
         mainService.createDefaultMessage($scope.newMessage).then(function(response) {

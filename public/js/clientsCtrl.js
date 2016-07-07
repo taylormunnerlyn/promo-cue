@@ -8,8 +8,8 @@ angular.module('app').controller('clientsCtrl', function($scope, mainService, us
       $scope.clients = response.data.clients;
     });
   }
-
   $scope.clients = user.data.clients;
+  $scope.getClients();
 
   $scope.deleteClient = function(id) {
     mainService.deleteClient(id).then(function(response) {
@@ -31,7 +31,7 @@ angular.module('app').controller('clientsCtrl', function($scope, mainService, us
   $scope.faded.splice(0);
   $scope.faded.push('animated fadeInRight')
   $scope.hidden = !$scope.hidden;
-  } 
+  }
 
 
 

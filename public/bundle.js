@@ -57,8 +57,8 @@ angular.module('app').controller('clientsCtrl', function($scope, mainService, us
       $scope.clients = response.data.clients;
     });
   }
-
   $scope.clients = user.data.clients;
+  $scope.getClients();
 
   $scope.deleteClient = function(id) {
     mainService.deleteClient(id).then(function(response) {
@@ -80,7 +80,7 @@ angular.module('app').controller('clientsCtrl', function($scope, mainService, us
   $scope.faded.splice(0);
   $scope.faded.push('animated fadeInRight')
   $scope.hidden = !$scope.hidden;
-  } 
+  }
 
 
 
@@ -88,7 +88,12 @@ angular.module('app').controller('clientsCtrl', function($scope, mainService, us
 
 // INITILIZE CONTROLLER
 // ============================================================
-angular.module("app").controller("csvCtrl", function($scope, Upload, $timeout) {
+angular.module("app").controller("csvCtrl", function($scope, Upload, $timeout, $state) {
+
+  $scope.isActive = false;
+  $scope.hidden = true;
+
+
   $scope.uploadFiles = function(file, errFiles) {
         $scope.f = file;
         $scope.errFile = errFiles && errFiles[0];
@@ -99,9 +104,10 @@ angular.module("app").controller("csvCtrl", function($scope, Upload, $timeout) {
             });
 
             file.upload.then(function (response) {
-                $timeout(function () {
-                    file.result = response.data;
-                });
+                // $timeout(function () {
+                //     file.result = response.data;
+                // });
+                $state.go('clients')
             }, function (response) {
                 if (response.status > 0)
                     $scope.errorMsg = response.status + ': ' + response.data;
@@ -111,6 +117,15 @@ angular.module("app").controller("csvCtrl", function($scope, Upload, $timeout) {
             });
         }
     }
+
+    $scope.faded = []
+    $scope.activeButton = function() {
+    $scope.isActive = !$scope.isActive;
+    $scope.faded.splice(0);
+    $scope.faded.push('animated fadeInRight')
+    $scope.hidden = !$scope.hidden;
+    }
+
 });
 
 angular.module("app").controller("defaultMessageCtrl", function($scope, mainService, user) {
@@ -121,12 +136,20 @@ angular.module("app").controller("defaultMessageCtrl", function($scope, mainServ
     $scope.getDefaultMessage = function() {
         mainService.getUser().then(function(response) {
             $scope.user = response.data;
+            for (var i = 0; i < response.data.messages.length; i++) {
+              if (response.data.messages[i]._id === $scope.user.defaultMessage) {
+                var item = response.data.messages.splice(i, 1)[0];
+                response.data.messages.unshift(item);
+              }
+            }
             $scope.defaultMessage = response.data.messages;
+            console.log(123, $scope.user);
+            console.log(124, $scope.defaultMessage);
         });
     };
     $scope.user = user.data;
-    console.log(user.data);
     $scope.defaultMessage = user.data.messages;
+    $scope.getDefaultMessage();
 
     $scope.createDefaultMessage = function() {
         mainService.createDefaultMessage($scope.newMessage).then(function(response) {

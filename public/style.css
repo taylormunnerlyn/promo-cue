@@ -2485,6 +2485,45 @@ table {
 button {
   background: none; }
 
+.csv-main-container {
+  height: 100vh;
+  width: 100%; }
+  .csv-main-container .csv-block-container {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto; }
+    .csv-main-container .csv-block-container .title-wrapper {
+      width: 600px;
+      margin: 0 auto; }
+      .csv-main-container .csv-block-container .title-wrapper h2 {
+        color: black;
+        font-size: 80px;
+        text-shadow: 0.04em 0.04em 0.1em black;
+        text-align: center; }
+      .csv-main-container .csv-block-container .title-wrapper .csv-underline {
+        height: .75vh;
+        width: 100%;
+        background-color: black;
+        margin-top: 10px;
+        box-shadow: 0.1em 0.1em 0.5em black; }
+    .csv-main-container .csv-block-container button {
+      height: 30px;
+      width: 140px;
+      border-radius: 6px;
+      color: black;
+      box-shadow: 0 0 0.2em black;
+      transition: .4s;
+      margin-bottom: -50px; }
+    .csv-main-container .csv-block-container button:hover {
+      box-shadow: 0 0 0.4em black;
+      transition: .4s; }
+    .csv-main-container .csv-block-container .progress-bar {
+      margin-bottom: 700px; }
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
   font-family: 'Montserrat', sans-serif; }
@@ -2601,10 +2640,6 @@ button {
   background-color: black;
   padding-top: 15px; }
 
-.login-block-container {
-  height: 100vh;
-  width: 40%; }
-
 .login-h1-container {
   height: 13vh;
   width: 100%;
@@ -2618,8 +2653,13 @@ button {
 
 .login-underline {
   height: .75vh;
-  width: 100%;
-  background-color: white; }
+  width: 550px;
+  background-color: white;
+  margin: 0 auto; }
+
+.login-block-container {
+  height: 100vh;
+  width: 100%; }
 
 .login-login {
   height: 84.25vh;
@@ -2641,12 +2681,9 @@ button {
     cursor: pointer; }
   .login-login input {
     height: 7vh;
-    width: 60%;
+    width: 400px;
     border-radius: 2px;
     font-size: 30px; }
-
-.login-login input {
-  transition: 1s; }
 
 .email:hover {
   text-align: center;
@@ -2655,6 +2692,38 @@ button {
 .password:hover {
   text-align: center;
   transition: .7s; }
+
+@media (max-width: 575px) {
+  .login-h1-container h1 {
+    font-size: 70px; } }
+
+@media (max-width: 575px) {
+  .login-underline {
+    width: 400px; } }
+
+@media (max-width: 575px) {
+  .login-login input {
+    height: 7vh;
+    width: 300px;
+    font-size: 25px; }
+  .login-login button {
+    font-size: 50px; } }
+
+@media (max-width: 425px) {
+  .login-h1-container h1 {
+    font-size: 60px; } }
+
+@media (max-width: 425px) {
+  .login-underline {
+    width: 300px; } }
+
+@media (max-width: 425px) {
+  .login-login input {
+    height: 7vh;
+    width: 200px;
+    font-size: 20px; }
+  .login-login button {
+    font-size: 40px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
@@ -2732,7 +2801,8 @@ button {
   float: right;
   width: 60px;
   height: 45px;
-  position: relative;
+  position: absolute;
+  right: 5px;
   z-index: 10;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -2823,7 +2893,7 @@ span:nth-child(2) {
   width: 100%; }
   .newClient-main-container .newClient-block-container {
     height: 100%;
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -2844,7 +2914,7 @@ span:nth-child(2) {
         box-shadow: 0.1em 0.1em 0.3em black; }
   .newClient-main-container input {
     height: 7vh;
-    width: 60%;
+    width: 400px;
     border-radius: 5px;
     font-size: 30px;
     border: 2px solid black;
@@ -2872,6 +2942,48 @@ span:nth-child(2) {
 
 .number:hover {
   text-align: center; }
+
+@media (max-width: 765px) {
+  .newClient-main-container .newClient-block-container .title-wrapper {
+    width: 500px; }
+    .newClient-main-container .newClient-block-container .title-wrapper h2 {
+      font-size: 70px; }
+  .newClient-main-container .newClient-block-container input {
+    width: 300px;
+    font-size: 25px; }
+  .newClient-main-container .newClient-block-container button {
+    font-size: 50px; } }
+
+@media (max-width: 660px) {
+  .newClient-main-container .newClient-block-container .title-wrapper {
+    width: 400px; }
+    .newClient-main-container .newClient-block-container .title-wrapper h2 {
+      font-size: 60px; }
+  .newClient-main-container .nav-display {
+    height: 95vh; } }
+
+@media (max-width: 570px) {
+  .newClient-main-container .newClient-block-container .title-wrapper {
+    width: 300px;
+    margin-top: 45px; }
+    .newClient-main-container .newClient-block-container .title-wrapper h2 {
+      font-size: 45px; }
+  .newClient-main-container .newClient-block-container button {
+    font-size: 40px; }
+  .newClient-main-container .nav-display {
+    height: 95vh; } }
+
+@media (max-width: 339px) {
+  .newClient-main-container .newClient-block-container .title-wrapper {
+    width: 300px; }
+    .newClient-main-container .newClient-block-container .title-wrapper h2 {
+      font-size: 45px; }
+  .newClient-main-container .newClient-block-container input {
+    width: 275px; }
+  .newClient-main-container .newClient-block-container button {
+    font-size: 40px; }
+  .newClient-main-container .nav-display {
+    height: 95vh; } }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {

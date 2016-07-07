@@ -15,3 +15,6 @@ var cron = function(){
 };
 
 module.exports = cron();
+
+
+// '00 15 12 * * 1-5'

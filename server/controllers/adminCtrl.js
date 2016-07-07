@@ -1,6 +1,7 @@
 var Admin = require('./../models/admin.js')
 var csv = require('csv');
 var fs = require('fs');
+var Clients = require('./../models/clients.js')
 
 module.exports = {
 
@@ -58,13 +59,27 @@ module.exports = {
         parsedData.forEach(function(e, i, self) {
           if (i !== 0) {
             newArr.push({
-              'Name': e[0],
-              'Phone': e[1],
-              'Number of Weeks': e[2]
+              'name': e[0],
+              'phone': Math.abs(~~e[1]),
+              'number': ~~e[2]
             })
           }
         })
-          console.log(newArr);
+          var promiseArray = [];
+          for (var i = 0; i < newArr.length; i++){
+            promiseArray.push(Clients.create(newArr[i], function(err, response) {
+              console.log(response);
+              Admin.findByIdAndUpdate(req.user._id, { $push: { 'clients': response } }, function(err, response) {
+                console.log(err, response);
+              })
+            }))
+            console.log(promiseArray);
+          }
+          Promise.all(promiseArray).then(function(response){
+            return res.send(response);
+          }).catch(function(err) {
+            console.log(err);
+          });
         })
       })
     }
