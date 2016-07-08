@@ -154,7 +154,7 @@ angular.module("app").controller("defaultMessageCtrl", function($scope, mainServ
     $scope.createDefaultMessage = function() {
         mainService.createDefaultMessage($scope.newMessage).then(function(response) {
             $scope.defaultMessage = response.data;
-            alert('client successfully created');
+            alert('Message successfully created');
             $scope.newMessage = '';
             $scope.getDefaultMessage();
         });
