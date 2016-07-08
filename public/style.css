@@ -2514,6 +2514,10 @@ button {
         font-size: 15px; } }
 
 @media (max-width: 660px) {
+  .clients-main-container .nav-display {
+    height: 95vh; }
+    .clients-main-container .nav-display h3 {
+      font-size: 30px; }
   .clients-main-container .clients-search-bar {
     height: 200px;
     display: flex;
@@ -2571,6 +2575,49 @@ button {
           width: 206.5px;
           margin-bottom: 5px; } }
 
+@media (max-width: 310px) {
+  .clients-main-container .nav-display {
+    height: 95vh; }
+    .clients-main-container .nav-display h3 {
+      font-size: 20px; }
+  .clients-main-container .clients-search-bar {
+    height: 90px;
+    margin-top: 15px; }
+    .clients-main-container .clients-search-bar input {
+      height: 25px;
+      width: 210px;
+      font-size: 15px;
+      text-align: center; }
+  .clients-main-container .title-wrapper {
+    width: 210px;
+    margin-top: 62px; }
+    .clients-main-container .title-wrapper h2 {
+      font-size: 30px; }
+    .clients-main-container .title-wrapper .clients-underline {
+      margin-top: 1px;
+      margin-bottom: -5px; }
+  .clients-main-container .clients-card-container {
+    width: 210px;
+    margin-top: 15px; }
+    .clients-main-container .clients-card-container ul {
+      height: 310px;
+      width: 210px; }
+      .clients-main-container .clients-card-container ul li {
+        font-size: 12px; }
+      .clients-main-container .clients-card-container ul input {
+        height: 20px;
+        width: 167px;
+        margin-bottom: 5px;
+        font-size: 11px; }
+      .clients-main-container .clients-card-container ul .clients-button-container {
+        height: 45px;
+        margin-top: -7px; }
+        .clients-main-container .clients-card-container ul .clients-button-container button {
+          height: 20px;
+          width: 100px;
+          margin-bottom: 5px;
+          font-size: 13px; } }
+
 .csv-main-container {
   height: 100vh;
   width: 100%; }
@@ -2621,6 +2668,10 @@ button {
     margin-bottom: 300px; } }
 
 @media (max-width: 650px) {
+  .csv-main-container .nav-display {
+    height: 95vh; }
+    .csv-main-container .nav-display h3 {
+      font-size: 30px; }
   .csv-main-container .csv-block-container .title-wrapper {
     width: 400px;
     margin-top: 40px; }
@@ -2641,6 +2692,21 @@ button {
     height: 200px;
     width: 230px;
     margin-bottom: 100px; } }
+
+@media (max-width: 310px) {
+  .csv-main-container .nav-display {
+    height: 95vh; }
+    .csv-main-container .nav-display h3 {
+      font-size: 20px; }
+  .csv-main-container .csv-block-container .title-wrapper {
+    width: 220px;
+    margin-top: 60px; }
+    .csv-main-container .csv-block-container .title-wrapper h2 {
+      font-size: 30px; }
+  .csv-main-container .csv-block-container button {
+    height: 150px;
+    width: 215px;
+    margin-bottom: 30px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
@@ -2772,6 +2838,10 @@ button {
         font-size: 15px; } }
 
 @media (max-width: 655px) {
+  .default-message-main-container .nav-display {
+    height: 95vh; }
+    .default-message-main-container .nav-display h3 {
+      font-size: 30px; }
   .default-message-main-container .title-wrapper {
     width: 400px;
     margin-top: 70px; }
@@ -2800,6 +2870,8 @@ button {
         font-size: 15px; } }
 
 @media (max-width: 555px) {
+  .default-message-main-container .nav-display {
+    height: 95vh; }
   .default-message-main-container .title-wrapper {
     width: 300px;
     margin-top: 70px; }
@@ -2826,6 +2898,39 @@ button {
       .default-message-main-container .default-message-card-container ul button {
         width: 82.3px;
         font-size: 15px; } }
+
+@media (max-width: 310px) {
+  .default-message-main-container .nav-display {
+    height: 95vh; }
+    .default-message-main-container .nav-display h3 {
+      font-size: 20px; }
+  .default-message-main-container .title-wrapper {
+    width: 220px;
+    margin-top: 70px; }
+    .default-message-main-container .title-wrapper h2 {
+      font-size: 27px; }
+    .default-message-main-container .title-wrapper .default-message-underline {
+      margin-top: 3px;
+      margin-bottom: -5px; }
+  .default-message-main-container .default-message-textarea-container textarea {
+    width: 220px; }
+  .default-message-main-container .default-message-textarea-container button {
+    margin-top: -20px;
+    margin-bottom: 0px;
+    font-size: 25px; }
+  .default-message-main-container .default-message-textarea-container .textarea-underline {
+    width: 220px;
+    margin-top: 20px; }
+  .default-message-main-container .default-message-card-container {
+    width: 220px;
+    margin-top: 15px; }
+    .default-message-main-container .default-message-card-container ul {
+      width: 220px; }
+      .default-message-main-container .default-message-card-container ul input {
+        font-size: 15px; }
+      .default-message-main-container .default-message-card-container ul button {
+        width: 55.7px;
+        font-size: 10px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
@@ -2926,6 +3031,34 @@ button {
   .login-login button {
     font-size: 40px; } }
 
+@media (max-width: 319px) {
+  .login-main-container .nav-display {
+    height: 95vh; }
+    .login-main-container .nav-display h3 {
+      font-size: 30px; } }
+
+@media (max-width: 319px) {
+  .login-main-container .login-block-container .login-h1-container h1 {
+    font-size: 50px; }
+  .login-main-container .login-block-container .login-underline {
+    width: 270px; } }
+
+@media (max-width: 290px) {
+  .login-main-container .login-block-container .login-h1-container h1 {
+    font-size: 40px; }
+  .login-main-container .login-block-container .login-underline {
+    width: 240px; }
+  .login-main-container .login-block-container .login-login button {
+    font-size: 35px; } }
+
+@media (max-width: 241px) {
+  .login-main-container .login-block-container .login-h1-container h1 {
+    font-size: 40px; }
+  .login-main-container .login-block-container .login-underline {
+    width: 220px; }
+  .login-main-container .login-block-container .login-login button {
+    font-size: 30px; } }
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
   font-family: 'Montserrat', sans-serif; }
@@ -2989,6 +3122,10 @@ button {
     width: 500px; } }
 
 @media (max-width: 658px) {
+  .mass-text-main-container .nav-display {
+    height: 95vh; }
+    .mass-text-main-container .nav-display h3 {
+      font-size: 30px; }
   .mass-text-main-container .mass-text-block-container .title-wrapper {
     width: 420px;
     margin-top: 75px; }
@@ -3013,6 +3150,23 @@ button {
     width: 250px; }
   .mass-text-main-container .mass-text-block-container button {
     font-size: 50px; } }
+
+@media (max-width: 310px) {
+  .mass-text-main-container .nav-display {
+    height: 95vh; }
+    .mass-text-main-container .nav-display h3 {
+      font-size: 20px; }
+  .mass-text-main-container .mass-text-block-container .title-wrapper {
+    width: 220px;
+    margin-top: 80px; }
+    .mass-text-main-container .mass-text-block-container .title-wrapper h2 {
+      font-size: 30px; }
+  .mass-text-main-container .mass-text-block-container textarea {
+    height: 600px;
+    width: 180px;
+    font-size: 15px; }
+  .mass-text-main-container .mass-text-block-container button {
+    font-size: 30px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
@@ -3193,6 +3347,10 @@ span:nth-child(2) {
     font-size: 50px; } }
 
 @media (max-width: 660px) {
+  .newClient-main-container .nav-display {
+    height: 95vh; }
+    .newClient-main-container .nav-display h3 {
+      font-size: 30px; }
   .newClient-main-container .newClient-block-container .title-wrapper {
     width: 400px; }
     .newClient-main-container .newClient-block-container .title-wrapper h2 {
@@ -3223,6 +3381,42 @@ span:nth-child(2) {
   .newClient-main-container .nav-display {
     height: 95vh; } }
 
+@media (max-width: 308px) {
+  .newClient-main-container .newClient-block-container .title-wrapper {
+    width: 260px;
+    margin-top: 50px; }
+    .newClient-main-container .newClient-block-container .title-wrapper h2 {
+      font-size: 33px; }
+    .newClient-main-container .newClient-block-container .title-wrapper .newClient-underline {
+      margin-top: -2px;
+      margin-bottom: -20px; }
+  .newClient-main-container .newClient-block-container input {
+    width: 260px; }
+  .newClient-main-container .newClient-block-container button {
+    font-size: 30px; }
+  .newClient-main-container .nav-display {
+    height: 95vh; }
+    .newClient-main-container .nav-display h3 {
+      font-size: 20px; } }
+
+@media (max-width: 274px) {
+  .newClient-main-container .newClient-block-container .title-wrapper {
+    width: 220px;
+    margin-top: 50px; }
+    .newClient-main-container .newClient-block-container .title-wrapper h2 {
+      font-size: 35px; }
+    .newClient-main-container .newClient-block-container .title-wrapper .newClient-underline {
+      margin-top: -2px;
+      margin-bottom: -20px; }
+  .newClient-main-container .newClient-block-container input {
+    width: 220px; }
+  .newClient-main-container .newClient-block-container button {
+    font-size: 30px; }
+  .newClient-main-container .nav-display {
+    height: 95vh; }
+    .newClient-main-container .nav-display h3 {
+      font-size: 20px; } }
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
   font-family: 'Montserrat', sans-serif; }
@@ -3239,7 +3433,7 @@ span:nth-child(2) {
 
 .register-block-container {
   height: 100vh;
-  width: 40%; }
+  width: 100%; }
 
 .register-h1-container {
   height: 13vh;
@@ -3254,10 +3448,11 @@ span:nth-child(2) {
 
 .register-underline {
   height: .75vh;
-  width: 100%;
-  background-color: white; }
+  width: 550px;
+  background-color: white;
+  margin: 0 auto; }
 
-.login-register {
+.register-register {
   height: 84.25vh;
   width: 100%;
   background: black;
@@ -3267,17 +3462,17 @@ span:nth-child(2) {
   align-items: center;
   float: left;
   transition: .4; }
-  .login-register h2 {
+  .register-register h2 {
     color: white;
     font-size: 60px; }
-  .login-register button {
+  .register-register button {
     color: white;
     font-size: 60px;
     background: none;
     cursor: pointer; }
-  .login-register input {
+  .register-register input {
     height: 7vh;
-    width: 60%;
+    width: 400px;
     border-radius: 2px;
     font-size: 30px; }
 
@@ -3289,3 +3484,47 @@ span:nth-child(2) {
 
 .password:hover {
   text-align: center; }
+
+@media (max-width: 610px) {
+  .register-main-container .nav-display {
+    height: 95vh; }
+    .register-main-container .nav-display h3 {
+      font-size: 30px; } }
+
+@media (max-width: 610px) {
+  .register-h1-container h1 {
+    font-size: 60px; } }
+
+@media (max-width: 610px) {
+  .register-underline {
+    width: 410px; } }
+
+@media (max-width: 610px) {
+  .register-register input {
+    height: 7vh;
+    width: 300px;
+    font-size: 20px; }
+  .register-register button {
+    font-size: 40px; } }
+
+@media (max-width: 446px) {
+  .register-main-container .register-block-container .register-h1-container h1 {
+    font-size: 50px; }
+  .register-main-container .register-block-container .register-underline {
+    width: 350px; } }
+
+@media (max-width: 365px) {
+  .register-main-container .register-block-container .register-h1-container h1 {
+    font-size: 40px; }
+  .register-main-container .register-block-container .register-underline {
+    width: 280px; } }
+
+@media (max-width: 315px) {
+  .register-main-container .register-block-container .register-h1-container h1 {
+    font-size: 32px; }
+  .register-main-container .register-block-container .register-underline {
+    width: 220px; }
+  .register-main-container .register-block-container .register-register input {
+    width: 220px; }
+  .register-main-container .register-block-container .register-register button {
+    font-size: 30px; } }
