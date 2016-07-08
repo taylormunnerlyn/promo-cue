@@ -3,7 +3,7 @@
   width: 100%
   .csv-block-container
     height: 100%
-    width: 40%
+    width: 100%
     display: flex
     flex-direction: column
     justify-content: space-around
@@ -12,6 +12,7 @@
     .title-wrapper
       width: 600px
       margin: 0 auto
+      margin-top: 60px
       h2
         color: black
         font-size: 80px
@@ -24,17 +25,53 @@
         margin-top: 10px
         box-shadow: .1em .1em .5em rgba(0, 0, 0, 1)
     button
-      height: 30px
-      width: 140px
+      height: 60px
+      width: 280px
       // border: 1.5px solid black
       border-radius: 6px
       color: black
-      box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
+      box-shadow: 0 0 .5em rgba(0, 0, 0, 1)
       transition: .4s
-      // margin-top: -50px
-      margin-bottom: -50px
+      margin-bottom: 500px
     button:hover
-      box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
+      box-shadow: 0 0 .8em rgba(0, 0, 0, 1)
       transition: .4s
-    .progress-bar
-      margin-bottom: 700px
+
+.csv-main-container
+  @media(max-width: 768px)
+    .csv-block-container
+      .title-wrapper
+        width: 500px
+        margin-top: 40px
+        h2
+          font-size: 70px
+      button
+        height: 250px
+        width: 280px
+        margin-bottom: 300px
+
+.csv-main-container
+  @media(max-width: 650px)
+    .csv-block-container
+      .title-wrapper
+        width: 400px
+        margin-top: 40px
+        h2
+          font-size: 60px
+      button
+        height: 50px
+        width: 260px
+        margin-bottom: 600px
+
+.csv-main-container
+  @media(max-width: 557px)
+    .csv-block-container
+      .title-wrapper
+        width: 300px
+        margin-top: 40px
+        h2
+          font-size: 40px
+      button
+        height: 200px
+        width: 230px
+        margin-bottom: 100px

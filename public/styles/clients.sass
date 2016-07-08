@@ -8,9 +8,11 @@ body
 .clients-main-container
   height: 100vh
   width: 100%
+  border: 1px transparent solid
   .title-wrapper
     width: 600px
     margin: 0 auto
+    margin-top: 60px
     h2
       color: black
       font-size: 80px
@@ -23,9 +25,10 @@ body
       margin-top: 10px
       box-shadow: .1em .1em .5em rgba(0, 0, 0, 1)
   .clients-search-bar
-    width: 520px
+    width: 100%
     margin: 0 auto
     margin-top: 40px
+    text-align: center
     input
       border: 1.5px solid black
       border-radius: 2px
@@ -52,24 +55,29 @@ body
         transition: .4s
         padding: 8px
       input
-        // border-radius: 1px
+        width: 182.3px
         color: black
         box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
         transition: .4s
+        padding-left: 8px
+        padding-top: 2px
       input:hover
         box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
         transition: .4s
-      button
-        height: 30px
-        width: 140px
-        // border: 1.5px solid black
-        border-radius: 6px
-        color: black
-        box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
-        transition: .4s
-      button:hover
-        box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
-        transition: .4s
+      .clients-button-container
+        width: 100%
+        text-align: center
+        button
+          height: 30px
+          width: 140px
+          // border: 1.5px solid black
+          border-radius: 6px
+          color: black
+          box-shadow: 0 0 .2em rgba(0, 0, 0, 1)
+          transition: .4s
+        button:hover
+          box-shadow: 0 0 .4em rgba(0, 0, 0, 1)
+          transition: .4s
       span
         margin-right: 10px
     ul:hover
@@ -81,12 +89,81 @@ button
   background: none
 
 
-// .clients-main-container
-//   @media(max-width: 750px)
-//     .title-wrapper
-//       width: 500px
-//       margin-top: 60px
-//     .clients-card-container
-//       width: 500px
-//       ul
-//         width: 500px
+.clients-main-container
+  @media(max-width: 765px)
+    .clients-search-bar
+      input
+        width: 160px
+        font-size: 15px
+    .title-wrapper
+      width: 500px
+      margin-top: 60px
+    .clients-card-container
+      width: 500px
+      ul
+        width: 500px
+        input
+          width: 149px
+          font-size: 15px
+
+.clients-main-container
+  @media(max-width: 660px)
+    .clients-search-bar
+      height: 200px
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      input
+        height: 50px
+        width: 400px
+        font-size: 20px
+        text-align: center
+    .title-wrapper
+      width: 400px
+      margin-top: 70px
+    .clients-card-container
+      width: 400px
+      ul
+        width: 400px
+        input
+          width: 115.55px
+          font-size: 11px
+
+.clients-main-container
+  @media(max-width: 424px)
+    .nav-display
+      height: 95vh
+    .clients-search-bar
+      height: 100px
+      margin-top: 15px
+      input
+        height: 25px
+        width: 250px
+        font-size: 20px
+        text-align: center
+    .title-wrapper
+      width: 250px
+      margin-top: 62px
+      h2
+        font-size: 45px
+    .clients-card-container
+      width: 250px
+      margin-top: 15px
+      ul
+        height: 310px
+        width: 250px
+        li
+
+        input
+          height: 20px
+          width: 206.5px
+          margin-bottom: 5px
+          font-size: 11px
+        .clients-button-container
+          height: 45px
+          margin-top: -7px
+          button
+            height: 20px
+            width: 206.5px
+            margin-bottom: 5px

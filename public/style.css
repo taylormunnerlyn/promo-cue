@@ -2419,10 +2419,12 @@ body {
 
 .clients-main-container {
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  border: 1px transparent solid; }
   .clients-main-container .title-wrapper {
     width: 600px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 60px; }
     .clients-main-container .title-wrapper h2 {
       color: black;
       font-size: 80px;
@@ -2435,9 +2437,10 @@ body {
       margin-top: 10px;
       box-shadow: 0.1em 0.1em 0.5em black; }
   .clients-main-container .clients-search-bar {
-    width: 520px;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 40px; }
+    margin-top: 40px;
+    text-align: center; }
     .clients-main-container .clients-search-bar input {
       border: 1.5px solid black;
       border-radius: 2px;
@@ -2464,22 +2467,28 @@ body {
         transition: .4s;
         padding: 8px; }
       .clients-main-container .clients-card-container ul input {
+        width: 182.3px;
         color: black;
         box-shadow: 0 0 0.2em black;
-        transition: .4s; }
+        transition: .4s;
+        padding-left: 8px;
+        padding-top: 2px; }
       .clients-main-container .clients-card-container ul input:hover {
         box-shadow: 0 0 0.4em black;
         transition: .4s; }
-      .clients-main-container .clients-card-container ul button {
-        height: 30px;
-        width: 140px;
-        border-radius: 6px;
-        color: black;
-        box-shadow: 0 0 0.2em black;
-        transition: .4s; }
-      .clients-main-container .clients-card-container ul button:hover {
-        box-shadow: 0 0 0.4em black;
-        transition: .4s; }
+      .clients-main-container .clients-card-container ul .clients-button-container {
+        width: 100%;
+        text-align: center; }
+        .clients-main-container .clients-card-container ul .clients-button-container button {
+          height: 30px;
+          width: 140px;
+          border-radius: 6px;
+          color: black;
+          box-shadow: 0 0 0.2em black;
+          transition: .4s; }
+        .clients-main-container .clients-card-container ul .clients-button-container button:hover {
+          box-shadow: 0 0 0.4em black;
+          transition: .4s; }
       .clients-main-container .clients-card-container ul span {
         margin-right: 10px; }
     .clients-main-container .clients-card-container ul:hover {
@@ -2489,12 +2498,85 @@ body {
 button {
   background: none; }
 
+@media (max-width: 765px) {
+  .clients-main-container .clients-search-bar input {
+    width: 160px;
+    font-size: 15px; }
+  .clients-main-container .title-wrapper {
+    width: 500px;
+    margin-top: 60px; }
+  .clients-main-container .clients-card-container {
+    width: 500px; }
+    .clients-main-container .clients-card-container ul {
+      width: 500px; }
+      .clients-main-container .clients-card-container ul input {
+        width: 149px;
+        font-size: 15px; } }
+
+@media (max-width: 660px) {
+  .clients-main-container .clients-search-bar {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    .clients-main-container .clients-search-bar input {
+      height: 50px;
+      width: 400px;
+      font-size: 20px;
+      text-align: center; }
+  .clients-main-container .title-wrapper {
+    width: 400px;
+    margin-top: 70px; }
+  .clients-main-container .clients-card-container {
+    width: 400px; }
+    .clients-main-container .clients-card-container ul {
+      width: 400px; }
+      .clients-main-container .clients-card-container ul input {
+        width: 115.55px;
+        font-size: 11px; } }
+
+@media (max-width: 424px) {
+  .clients-main-container .nav-display {
+    height: 95vh; }
+  .clients-main-container .clients-search-bar {
+    height: 100px;
+    margin-top: 15px; }
+    .clients-main-container .clients-search-bar input {
+      height: 25px;
+      width: 250px;
+      font-size: 20px;
+      text-align: center; }
+  .clients-main-container .title-wrapper {
+    width: 250px;
+    margin-top: 62px; }
+    .clients-main-container .title-wrapper h2 {
+      font-size: 45px; }
+  .clients-main-container .clients-card-container {
+    width: 250px;
+    margin-top: 15px; }
+    .clients-main-container .clients-card-container ul {
+      height: 310px;
+      width: 250px; }
+      .clients-main-container .clients-card-container ul input {
+        height: 20px;
+        width: 206.5px;
+        margin-bottom: 5px;
+        font-size: 11px; }
+      .clients-main-container .clients-card-container ul .clients-button-container {
+        height: 45px;
+        margin-top: -7px; }
+        .clients-main-container .clients-card-container ul .clients-button-container button {
+          height: 20px;
+          width: 206.5px;
+          margin-bottom: 5px; } }
+
 .csv-main-container {
   height: 100vh;
   width: 100%; }
   .csv-main-container .csv-block-container {
     height: 100%;
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -2502,7 +2584,8 @@ button {
     margin: 0 auto; }
     .csv-main-container .csv-block-container .title-wrapper {
       width: 600px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-top: 60px; }
       .csv-main-container .csv-block-container .title-wrapper h2 {
         color: black;
         font-size: 80px;
@@ -2515,18 +2598,49 @@ button {
         margin-top: 10px;
         box-shadow: 0.1em 0.1em 0.5em black; }
     .csv-main-container .csv-block-container button {
-      height: 30px;
-      width: 140px;
+      height: 60px;
+      width: 280px;
       border-radius: 6px;
       color: black;
-      box-shadow: 0 0 0.2em black;
+      box-shadow: 0 0 0.5em black;
       transition: .4s;
-      margin-bottom: -50px; }
+      margin-bottom: 500px; }
     .csv-main-container .csv-block-container button:hover {
-      box-shadow: 0 0 0.4em black;
+      box-shadow: 0 0 0.8em black;
       transition: .4s; }
-    .csv-main-container .csv-block-container .progress-bar {
-      margin-bottom: 700px; }
+
+@media (max-width: 768px) {
+  .csv-main-container .csv-block-container .title-wrapper {
+    width: 500px;
+    margin-top: 40px; }
+    .csv-main-container .csv-block-container .title-wrapper h2 {
+      font-size: 70px; }
+  .csv-main-container .csv-block-container button {
+    height: 250px;
+    width: 280px;
+    margin-bottom: 300px; } }
+
+@media (max-width: 650px) {
+  .csv-main-container .csv-block-container .title-wrapper {
+    width: 400px;
+    margin-top: 40px; }
+    .csv-main-container .csv-block-container .title-wrapper h2 {
+      font-size: 60px; }
+  .csv-main-container .csv-block-container button {
+    height: 50px;
+    width: 260px;
+    margin-bottom: 600px; } }
+
+@media (max-width: 557px) {
+  .csv-main-container .csv-block-container .title-wrapper {
+    width: 300px;
+    margin-top: 40px; }
+    .csv-main-container .csv-block-container .title-wrapper h2 {
+      font-size: 40px; }
+  .csv-main-container .csv-block-container button {
+    height: 200px;
+    width: 230px;
+    margin-bottom: 100px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
@@ -2534,10 +2648,12 @@ button {
 
 .default-message-main-container {
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  border: 1px solid transparent; }
   .default-message-main-container .title-wrapper {
     width: 700px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 60px; }
     .default-message-main-container .title-wrapper h2 {
       color: black;
       font-size: 80px;
@@ -2582,7 +2698,6 @@ button {
     margin: 0 auto;
     margin-top: 40px; }
     .default-message-main-container .default-message-card-container ul {
-      height: 200px;
       width: 600px;
       background-color: white;
       margin-bottom: 30px;
@@ -2592,12 +2707,13 @@ button {
       box-shadow: 0 0 1em black;
       transition: .3s; }
       .default-message-main-container .default-message-card-container ul li {
-        height: 30px;
         color: black;
         box-shadow: 0 0 0.2em black;
         transition: .4s;
         padding: 8px; }
       .default-message-main-container .default-message-card-container ul input {
+        height: 30px;
+        width: 100%;
         color: black;
         box-shadow: 0 0 0.2em black;
         transition: .4s; }
@@ -2629,6 +2745,87 @@ button {
 button {
   background: none;
   cursor: pointer; }
+
+@media (max-width: 866px) {
+  .default-message-main-container .title-wrapper {
+    width: 500px;
+    margin-top: 60px; }
+    .default-message-main-container .title-wrapper h2 {
+      font-size: 60px; }
+    .default-message-main-container .title-wrapper .default-message-underline {
+      margin-top: 3px; }
+  .default-message-main-container .default-message-textarea-container {
+    margin-top: 5px; }
+    .default-message-main-container .default-message-textarea-container textarea {
+      width: 500px; }
+    .default-message-main-container .default-message-textarea-container button {
+      margin-top: -20px;
+      margin-bottom: 0px; }
+    .default-message-main-container .default-message-textarea-container .textarea-underline {
+      width: 500px; }
+  .default-message-main-container .default-message-card-container {
+    width: 500px;
+    margin-top: 20px; }
+    .default-message-main-container .default-message-card-container ul {
+      width: 500px; }
+      .default-message-main-container .default-message-card-container ul input {
+        font-size: 15px; } }
+
+@media (max-width: 655px) {
+  .default-message-main-container .title-wrapper {
+    width: 400px;
+    margin-top: 70px; }
+    .default-message-main-container .title-wrapper h2 {
+      font-size: 49px; }
+    .default-message-main-container .title-wrapper .default-message-underline {
+      margin-top: 3px; }
+  .default-message-main-container .default-message-textarea-container {
+    margin-top: 5px; }
+    .default-message-main-container .default-message-textarea-container textarea {
+      width: 400px; }
+    .default-message-main-container .default-message-textarea-container button {
+      margin-top: -20px;
+      margin-bottom: 0px; }
+    .default-message-main-container .default-message-textarea-container .textarea-underline {
+      width: 400px; }
+  .default-message-main-container .default-message-card-container {
+    width: 400px;
+    margin-top: 20px; }
+    .default-message-main-container .default-message-card-container ul {
+      width: 400px; }
+      .default-message-main-container .default-message-card-container ul input {
+        font-size: 15px; }
+      .default-message-main-container .default-message-card-container ul button {
+        width: 115.6px;
+        font-size: 15px; } }
+
+@media (max-width: 555px) {
+  .default-message-main-container .title-wrapper {
+    width: 300px;
+    margin-top: 70px; }
+    .default-message-main-container .title-wrapper h2 {
+      font-size: 37px; }
+    .default-message-main-container .title-wrapper .default-message-underline {
+      margin-top: 3px; }
+  .default-message-main-container .default-message-textarea-container {
+    margin-top: 5px; }
+    .default-message-main-container .default-message-textarea-container textarea {
+      width: 300px; }
+    .default-message-main-container .default-message-textarea-container button {
+      margin-top: -20px;
+      margin-bottom: 0px; }
+    .default-message-main-container .default-message-textarea-container .textarea-underline {
+      width: 300px; }
+  .default-message-main-container .default-message-card-container {
+    width: 300px;
+    margin-top: 20px; }
+    .default-message-main-container .default-message-card-container ul {
+      width: 300px; }
+      .default-message-main-container .default-message-card-container ul input {
+        font-size: 15px; }
+      .default-message-main-container .default-message-card-container ul button {
+        width: 82.3px;
+        font-size: 15px; } }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
@@ -2756,7 +2953,8 @@ button {
       text-shadow: 0.04em 0.04em 0.2em black;
       transition: .4s; }
   .mass-text-main-container .title-wrapper {
-    width: 600px; }
+    width: 600px;
+    margin-top: 60px; }
     .mass-text-main-container .title-wrapper h2 {
       color: black;
       font-size: 80px;
@@ -2793,7 +2991,7 @@ button {
 @media (max-width: 658px) {
   .mass-text-main-container .mass-text-block-container .title-wrapper {
     width: 420px;
-    margin-top: 55px; }
+    margin-top: 75px; }
     .mass-text-main-container .mass-text-block-container .title-wrapper h2 {
       font-size: 60px; }
   .mass-text-main-container .mass-text-block-container textarea {
@@ -2803,9 +3001,11 @@ button {
     font-size: 50px; } }
 
 @media (max-width: 460px) {
+  .mass-text-main-container .nav-display {
+    height: 95vh; }
   .mass-text-main-container .mass-text-block-container .title-wrapper {
     width: 300px;
-    margin-top: 65px; }
+    margin-top: 80px; }
     .mass-text-main-container .mass-text-block-container .title-wrapper h2 {
       font-size: 50px; }
   .mass-text-main-container .mass-text-block-container textarea {

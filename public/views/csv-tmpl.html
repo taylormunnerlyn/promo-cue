@@ -11,19 +11,11 @@
 
     <div class="csv-block-container">
         <div class="animated fadeInDown title-wrapper">
-            <h2>CSV</h2>
+            <h2>Import Clients</h2>
             <div class="csv-underline"></div>
         </div>
         <button type="file" ngf-select="uploadFiles($file, $invalidFiles)" accept="text/csv" ngf-pattern="'.csv'" ngf-max-size="1MB">
-            Select File</button>
-        <br>
-        <br>
-        <div class="progress-bar" style="font:smaller">{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
-            <span class="progress" ng-show="f.progress >= 0">
-              <div style="width:{{f.progress}}%"
-                   ng-bind="f.progress + '%'"></div>
-          </span>
-        </div>
+            Select CSV File</button>
     </div>
 </div>
 {{errorMsg}}

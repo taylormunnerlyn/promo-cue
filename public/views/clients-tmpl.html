@@ -31,8 +31,10 @@
             <input type="text" placeholder="Edit Name" ng-model="updatedClient.name" />
             <input type="number" placeholder="Edit Phone" ng-model="updatedClient.phone" />
             <input type="number" placeholder="Edit Num. of Weeks" ng-model="updatedClient.number" /><br><br>
-            <button ng-click="updateClient(client._id, updatedClient)" name="button">Save Changes</button>
-            <button ng-click="deleteClient(client._id)">Delete Client</button><br><br><br
+            <div class="clients-button-container">
+              <button ng-click="updateClient(client._id, updatedClient)" name="button">Save Changes</button>
+              <button ng-click="deleteClient(client._id)">Delete Client</button><br><br><br
+            </div>
         </ul>
     </div>
 
