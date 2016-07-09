@@ -2651,7 +2651,7 @@ button {
       color: black;
       box-shadow: 0 0 0.5em black;
       transition: .4s;
-      margin-bottom: 500px; }
+      margin-bottom: 400px; }
     .csv-main-container .csv-block-container button:hover {
       box-shadow: 0 0 0.8em black;
       transition: .4s; }
@@ -2680,7 +2680,7 @@ button {
   .csv-main-container .csv-block-container button {
     height: 50px;
     width: 260px;
-    margin-bottom: 600px; } }
+    margin-bottom: 300px; } }
 
 @media (max-width: 557px) {
   .csv-main-container .csv-block-container .title-wrapper {
