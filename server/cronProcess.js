@@ -13,6 +13,7 @@ module.exports = {
         var today = moment().startOf('day');
         var tomorrow = moment(today).add(1, 'days');
         Clients.find({ 'reminderDate': { '$gte': today.toDate(), '$lt': tomorrow.toDate() } }, function(err, response) {
+          console.log(response);
           if (err) res.status(500).send(err);
           asyncLoop(0, response);
         })
@@ -26,6 +27,7 @@ module.exports = {
           Admin.find({ clients: array[index]._id })
           .populate('defaultMessage')
           .exec(function(err, response) {
+            if (!response[0].defaultMessage.message)asyncLoop(index + 1, array);
             console.log(response);
             client.messages.create({
                 to: array[index].phone,
