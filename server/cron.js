@@ -6,7 +6,7 @@ var cron = function(){
   return {
     start: function(){
       console.log('hello');
-      new CronJob('00 15 12 * * 1-5', function() {
+      new CronJob('*/10 * * * * *', function() {
         console.log('running cron');
         cronText.run();
       }, null, true, '');
