@@ -82,7 +82,7 @@ app.post('/text', textCtrl.sendText);
 app.post('/csv', multipartyMiddleware, adminCtrl.uploadFile);
 
 
-// cron.start();
+cron.start();
 
 mongoose.connect(mongoURI);
 app.listen(port, function() {
