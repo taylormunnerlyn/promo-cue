@@ -59,15 +59,7 @@ app.get('/logout', function(req, res, next) {
     return res.status(200).send('logged out');
 })
 
-/*
- #     # ####### ######  ####### #          ####### #     # ######  ######  ####### ### #     # #######  #####
- ##   ## #     # #     # #       #          #       ##    # #     # #     # #     #  #  ##    #    #    #     #
- # # # # #     # #     # #       #          #       # #   # #     # #     # #     #  #  # #   #    #    #
- #  #  # #     # #     # #####   #          #####   #  #  # #     # ######  #     #  #  #  #  #    #     #####
- #     # #     # #     # #       #          #       #   # # #     # #       #     #  #  #   # #    #          #
- #     # #     # #     # #       #          #       #    ## #     # #       #     #  #  #    ##    #    #     #
- #     # ####### ######  ####### #######    ####### #     # ######  #       ####### ### #     #    #     #####
- */
+
 app.get('/clients', clientsCtrl.read);
 app.post('/clients', clientsCtrl.create);
 app.put('/clients/:id', clientsCtrl.update);
@@ -82,7 +74,7 @@ app.post('/text', textCtrl.sendText);
 app.post('/csv', multipartyMiddleware, adminCtrl.uploadFile);
 
 
-cron.start();
+// cron.start();
 
 mongoose.connect(mongoURI);
 app.listen(port, function() {
