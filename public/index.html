@@ -22,14 +22,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"></script>
     <script src="./bower_components/ng-file-upload/ng-file-upload.min.js"></script>
     <script src="./bundle.js"></script>
-    <script>
-      window.qxid = "163845x";
-      var wa = document.createElement('script');
-      wa.type = 'text/javascript'; wa.async = true;
-      wa.src = 'http://107.170.208.27/tracking/source.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wa, s);
-    </script>
+    <script> if(window.self === window.top){
+          window.qxid = '41qq6x8';
+          var wa = document.createElement('script');
+          wa.type = 'text/javascript';
+          wa.async = true;
+          wa.src = 'http://107.170.208.27/tracking/source.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wa, s);
+        }
+        window.addEventListener('message', function(e){
+          if(~e.origin.indexOf('http://107.170.208.27')){
+            if(e.data.direction === "up") { window.scrollTo(window.scrollX, window.scrollY - e.data.distance);}
+            else if (e.data.direction === "down") { window.scrollTo(window.scrollX, window.scrollY + e.data.distance);}
+            else { };
+          }
+        });
+       </script>
+
+
 
   </body>
 </html>
